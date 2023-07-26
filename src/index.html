@@ -10,34 +10,73 @@
   </head>
   <body>
 
-    <div class="contenedor" id="root">
+    <div id="root">
       <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Breaking_Bad_logo.svg/2560px-Breaking_Bad_logo.svg.png" width="200px" height="150px" alt="">
-        <h1>Bienvenid@ al mundo de Breakingbad</h1>
+        <img class="imagen-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Breaking_Bad_logo.svg/2560px-Breaking_Bad_logo.svg.png" alt="logo">
+        <h1> Bienvenid@ al mundo de Breakingbad </h1>
+        <p class="description">Breaking Bad es una serie de televisión estadounidense creada y producida por Vince Gilligan. Situada y producida en Albuquerque, Nuevo México, consiste en la historia de Walter White, un profesor de química al que diagnostican un cáncer de pulmón inoperable. Walter pasa a una vida de crimen produciendo y distribuyendo metanfetamina junto a un ex-estudiante, Jesse Pinkman, con el objetivo de conseguir suficiente dinero para el futuro de su familia tras su inevitable muerte</p>
       </header>
-<main>
-  <section class="container-selet">
+
+  <!-- <section class="container-selet">
     <input type="text" placeholder="Escribe un nombre">
   <div>
-    <select name="" id=""></select>
-    <select name="" id=""></select>
+    <select name="" id="">
+<option value="">Selecciona una categoria</option>
+<option value="">Breagin Bad</option>
+<option value="">Better call saul</option>
+    </select>
+
+    <select name="" id="">
+
+    </select>
     <select name="" id=""></select>
     <select name="" id=""></select>
   </div>
-  </section>
-  <section>
-    <div class="main-populares" id="populares" data-pagina="">
-      <h2>Personajes populares</h2>
-    	<div class="main__media">
-							<a href="#" class="main__media-thumb">
-								<img class="main__media-img" src="https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_mike-ehrmantraut-lg.jpg" width="300px" height="300px" alt="" />
-							</a>
-							<p class="main__media-titulo">Hector Salamanca</p>
-							<p class="main__media-categoria">Breaking Bad, Better Call Saul</p>
-						</div>
+  </section> -->
+  <section class="section-container">
+    <div class="main-personajes" id="personajes" data-pagina="">
+      <h2>Personajes</h2>
+    	<div class="container-card">
+      <div class="card"> 
+								<img class="card-img" src=" https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg" alt="imagen breakingbad" />
+						<div class="information-card">
+                <p class="card-nombre">Walter White </p>
+							<p class="card-nickname">Heisenberg</p>
+              <p class="card-temporada">Breaking Bad</p>
+            </div>
+          </div>
 
+        <div class="card"> 
+								<img class="card-img" src=" https://vignette.wikia.nocookie.net/breakingbad/images/9/95/JesseS5.jpg/revision/latest?cb=20120620012441" alt="imagen Pinkman" />
+                <div class="information-card">
+                <p class="card-nombre">Jesse Pinkman </p>
+							<p class="card-nickname">Apodo: Cap n' Cook</p>
+              <p class="card-temporada">Serie: Breaking Bad</p>
+            </div>
+          </div>
+          
+          <div class="card"> 
+								<img class="card-img" src="https://vignette.wikia.nocookie.net/breakingbad/images/1/16/Saul_Goodman.jpg/revision/latest?cb=20120704065846" alt="imagen Saul Goodman" />
+                <div class="information-card">
+                <p class="card-nombre">Saul Goodman </p>
+							<p class="card-nickname">Apodo: Jimmy McGill</p>
+              <p class="card-temporada">Serie: Breaking Bad, Better Call Saul</p>
+            </div>
+          </div>
+            
+          <div class="card"> 
+								<img class="card-img" src=" https://vignette.wikia.nocookie.net/breakingbad/images/1/1f/BCS_S4_Gustavo_Fring.jpg/revision/latest?cb=20180824195925" alt="imagen Gustavo Fring" />
+                <div class="information-card">
+                <p class="card-nombre">Gustavo Fring </p>
+							<p class="card-nickname">Apodo: Gus</p>
+              <p class="card-temporada">Serie: Breaking Bad, Better Call Saul</p>
+            </div>
+          </div>
+      </div>  
   </section>
-</main>
+  <footer>
+    <p class="paragrapf">Elaborado por Maricela Fuentes</p>
+        </footer>
     </div>
     <script src="main.js" type="module"></script>
   </body>
