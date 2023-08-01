@@ -25,8 +25,8 @@ header {
   min-height: 200px;
 }
 .imagen-logo {
-  width: 200px;
-  height: 150px;
+  width: 196px;
+  height:196px;
   padding-top: 20px;
 }
 h1 {
@@ -266,10 +266,10 @@ footer {
 
   /* Modo responsive*/
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     header{
       width: 100%;
       height:auto;
     }
 
-    }
+    } */
