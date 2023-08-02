@@ -1,3 +1,4 @@
+// Logica del DOM
 // Importamos la data del archivo de Breakingbad.
 import data from "./data/breakingbad/breakingbad.js";
 import { renderizarPersonajes } from "./data.js";
@@ -19,6 +20,8 @@ const ordenamiento = document.getElementById("ordenamiento");
 renderizarPersonajes(personajes, contenedorPersonajes, modalPersonaje);
 //Listener
 buscador.addEventListener("keyup", (e) => {
+  // Filtramos convirtirndo el nickname y el name en minuscula con tolowercase()
+  // Use el metodo includes para comparar el valor del input con el nickname y name.
   const resultados = personajes.filter(
     (personaje) =>
       personaje.nickname.toLowerCase().includes(e.target.value) ||

@@ -71,6 +71,7 @@ function mostrarDetallesPersonajes(personaje, modalPersonaje) {
 
   // Agregamos porcentaje de aparicion
   const porcentaje = document.createElement("li");
+  // Calculamos el porcentaje de aparicion de breaking bad y bettel call saul
   porcentaje.innerHTML = `<span>Porcentaje de aparición: </span> ${
     (personaje.appearance.length / 5) * 100 > 0
       ? (personaje.appearance.length / 5) * 100
@@ -101,10 +102,12 @@ function mostrarDetallesPersonajes(personaje, modalPersonaje) {
   modalClose.appendChild(modalDescription);
   modalPersonaje.appendChild(modalClose);
 
+  // Agregamos estilos para hacer visible el modal
   modalPersonaje.style.opacity = "1";
   modalPersonaje.style.visibility = "visible";
 }
 
+// Funcion para renderizar los personajes
 function renderizarPersonajes(
   personajes,
   contenedorPersonajes,
