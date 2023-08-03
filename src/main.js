@@ -4,7 +4,8 @@ import data from "./data/breakingbad/breakingbad.js";
 import { renderizarPersonajes } from "./data.js";
 
 // Guardamos el array de personajes en una variable
-const personajes = data.breaking_bad;
+let personajes = data.breaking_bad;
+const todosLosPersonajes = data.breaking_bad;
 //Referencias DOM
 const contenedorPersonajes = document.querySelector(".contenedor-card");
 const buscador = document.querySelector(
@@ -34,29 +35,40 @@ buscador.addEventListener("keyup", (e) => {
 
 // Listener del select categoria que se invoca al seleccionar una categoria(change)
 categoria.addEventListener("change", (e) => {
-  const resultados = personajes.filter((personaje) =>
-    personaje.category.includes(e.target.value)
-  );
-  renderizarPersonajes(resultados, contenedorPersonajes, modalPersonaje);
+  if (e.target.value !== "") {
+    personajes = personajes.filter((personaje) =>
+      personaje.category.includes(e.target.value)
+    );
+  }else {
+    personajes = todosLosPersonajes
+  }
+
+  renderizarPersonajes(personajes, contenedorPersonajes, modalPersonaje);
 });
 
 // Listener del select temporadas
 temporadas.addEventListener("change", (e) => {
-  const resultados = personajes.filter((personaje) =>
-    personaje.appearance.includes(Number(e.target.value))
-  );
-  renderizarPersonajes(resultados, contenedorPersonajes, modalPersonaje);
+  if (e.target.value !== "") {
+    personajes = personajes.filter((personaje) =>
+      personaje.appearance.includes(Number(e.target.value))
+    );
+  }else {
+    personajes = todosLosPersonajes
+  }
+
+  renderizarPersonajes(personajes, contenedorPersonajes, modalPersonaje);
 });
 
 // Listener del select ascendente y descendente
 ordenamiento.addEventListener("change", (e) => {
-  let resultados = [];
-  if (e.target.value === "ascedente") {
-    // Esto es ordenar de forma ascendente (a - z)
-    resultados = personajes.sort((a, b) => a.name.localeCompare(b.name));
+  if (e.target.value === "descendente") {
+    // Esto es ordenar de forma ascendente (z - a)
+    personajes = personajes.sort((a, b) => b.name.localeCompare(a.name));
+  } else if(e.target.value === "ascendente"){
+    // Esto es ordenar de forma descendente (a - z)
+    personajes = personajes.sort((a, b) => a.name.localeCompare(b.name));
   } else {
-    // Esto es ordenar de forma descendente (z - a)
-    resultados = personajes.sort((a, b) => b.name.localeCompare(a.name));
+    personajes = todosLosPersonajes
   }
-  renderizarPersonajes(resultados, contenedorPersonajes, modalPersonaje);
+  renderizarPersonajes(personajes, contenedorPersonajes, modalPersonaje);
 });

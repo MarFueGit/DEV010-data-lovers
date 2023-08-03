@@ -38,51 +38,52 @@ h1 {
   letter-spacing: 1px;
   color: white;
   font-size: 20px;
-  
 }
 /* estilos del input y select */
 .container-select {
   width: 100%;
   height: 30vh;
-  text-align: center;
-  margin: 10px;
+ text-align: center;
   padding-top: 30px;
+ 
 }
 
 input[type="text"] {
-  width: 50%;
-  height: 40px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 2px solid green;
-  text-align: center;
-  outline: none;
-  margin-bottom: 50px;
-  
+ padding: 12px 0px 12px 42px;
   background-color: #c0e0cf;
   cursor: pointer;
+  margin-bottom: 20px;
+  outline: none;
+ border-radius: 5px;
+ border: none;
+
+ 
+}
+.search-logo input:focus{
+  border: 3px solid green;
 }
 .search-logo {
   position: relative;
-}
-.search-input {
+} 
+/* .search-input {
   padding-right: 30px;
-}
-.fa-solid {
-  position: absolute;
-  top: 25%;
-  right: 400px;
-  transform: translateY(-50%);
-  width: 20px; /* Ajusta el tamaño del ícono según tus necesidades */
-  height: 20px;
+} */
+.search-logo i{ 
+   position: absolute;
+  margin-left: 15px;
+  top: 11px;
   font-size: 18px;
+ 
+} 
+.search-logo input::placeholder, input, i{
   color: #5d6d7e;
+ 
 }
 
 select {
   width: 280px;
   height: 30px;
-  font-size: 18px;
+  font-size: 17px;
   margin: 10px;
   border-radius: 5px;
   background-color: #c0e0cf;
@@ -99,7 +100,6 @@ h2 {
   text-align: center;
   color: #ffeb3b;
   margin-bottom: 50px;
- 
 }
 /* estilos para las card  */
 
@@ -191,7 +191,6 @@ footer {
 
 .modal {
   width: 60%;
-  max-width: 100%;
   height: auto;
   background-color: #c0e0cf;
   /* overflow: hidden; */
@@ -253,34 +252,69 @@ span {
 /* Modo responsive*/
 
 @media screen and (max-width: 768px) {
-    header{
-      width: 100%;
-      height:auto;
-    }
-    .imagen-logo{
-      width: 150px;
-      height: auto;
-      object-fit: cover;
-    }
-    h1{
-      font-size: 1rem;
+  header {
+    width: 100%;
+    height: auto;
+  }
+  .imagen-logo {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  .descripcion {
+    font-size: 0.8rem;
+  }
+  input[type="text"] {
+    width: 50%;
+  }
 
-    }
-    .descripcion{
-      font-size: 0.9rem;
-    }
-    input[type="text"] {
-      width: 50%;
-     
+  h2 {
+    font-size: 20px;
+    margin-top: 100px;
+  }
+  .paragrapf{
+    font-size: 16px;
+  }
+  
+  
+}
+@media screen and (max-width: 1024px){
+  .container-select {
+    padding-top: 70px;
+   
+  }  
+}
 
-    }
+@media screen and (max-width:768px) {
+  .modal{
+width: 90%;
+height: 500px;
 
-    .modal{
-     
 
-    }
-    .card-img1{
-      max-width: 100%;
-      height: auto;
-    }
-    }
+  }
+  .card-img1 {
+  width: 150px;
+  max-width: 100%;
+    height:auto;
+    object-fit: cover;
+   
+  }
+  .modal-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 14px;
+  
+  }
+ 
+  li {
+    line-height: 15px;
+   
+  }
+ .modal h3{
+  font-size: 18px;
+ }
+}
