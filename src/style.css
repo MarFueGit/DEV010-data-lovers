@@ -65,9 +65,6 @@ input[type="text"] {
 .search-logo {
   position: relative;
 } 
-/* .search-input {
-  padding-right: 30px;
-} */
 .search-logo i{ 
    position: absolute;
   margin-left: 15px;
@@ -77,6 +74,7 @@ input[type="text"] {
 } 
 .search-logo input::placeholder, input, i{
   color: #5d6d7e;
+  font-weight: bold;
  
 }
 
@@ -269,6 +267,8 @@ span {
   }
   input[type="text"] {
     width: 50%;
+    font-size: 13px;
+    padding: 12px 0 12px 40px;
   }
 
   h2 {
@@ -278,9 +278,41 @@ span {
   .paragrapf{
     font-size: 16px;
   }
+
+   /*response del modal */
+  .modal{
+    width: 90%;
+    height: 500px;
+    
+    
+      }
+      .card-img1 {
+      width: 150px;
+      max-width: 100%;
+        height:auto;
+        object-fit: cover;
+       
+      }
+      .modal-description {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 14px;
+      
+      }
+     
+      li {
+        line-height: 15px;
+       
+      }
+     .modal h3{
+      font-size: 18px;
+     }
   
   
 }
+
+
 @media screen and (max-width: 1024px){
   .container-select {
     padding-top: 70px;
@@ -288,33 +320,3 @@ span {
   }  
 }
 
-@media screen and (max-width:768px) {
-  .modal{
-width: 90%;
-height: 500px;
-
-
-  }
-  .card-img1 {
-  width: 150px;
-  max-width: 100%;
-    height:auto;
-    object-fit: cover;
-   
-  }
-  .modal-description {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 14px;
-  
-  }
- 
-  li {
-    line-height: 15px;
-   
-  }
- .modal h3{
-  font-size: 18px;
- }
-}

@@ -162,5 +162,52 @@ function renderizarPersonajes(
     contenedorPersonajes.appendChild(card);
   }
 }
+// Funcion para filtrar el input Nombre
+function filtrarPorNombre(nombre, personajes) {
+  // Filtramos convirtirndo el nickname y el name en minuscula con tolowercase()
+  // Use el metodo includes para comparar el valor del input con el nickname y name.
+  return personajes.filter(
+    (personaje) =>
+      personaje.nickname.toLowerCase().includes(nombre) ||
+      personaje.name.toLowerCase().includes(nombre)
+  );
+}
+// Funcion para filtrar todos los selects
+function filtrarPorSelect(categoria, temporadas, ordenamiento, personajes) {
+  let resultados = personajes;
+  // Obtenemos el valor de la opcion seleccionada en categoria, temporadas y ordenamiento
+  const valorSerie = categoria.options[categoria.selectedIndex].value;
+  const valorTemporadas = temporadas.options[temporadas.selectedIndex].value;
+  const valorOrdenar = ordenamiento.options[ordenamiento.selectedIndex].value;
+  // Validamos si el filtro de serie esta activado,entonces filtramos por serie
+  if (valorSerie !== "") {
+    resultados = personajes.filter((personaje) =>
+      personaje.category.includes(valorSerie)
+    );
+  }
+  // Validamos si el filtro de temporadas esta activado, entonces filtramos por temporada
+  if (valorTemporadas !== "") {
+    resultados = resultados.filter((personaje) =>
+      personaje.appearance.includes(Number(valorTemporadas))
+    );
+  }
 
-export { renderizarPersonajes, mostrarDetallesPersonajes };
+  // Validamos si el filtro de ordenarPor esta activado, entonces ordenamos
+  if (valorOrdenar !== "") {
+    if (valorOrdenar === "descendente") {
+      // Esto es ordenar de forma ascendente (z - a)
+      resultados = resultados.sort((a, b) => b.name.localeCompare(a.name));
+    } else if (valorOrdenar === "ascendente") {
+      // Esto es ordenar de forma descendente (a - z)
+      resultados = resultados.sort((a, b) => a.name.localeCompare(b.name));
+    }
+  }
+  return resultados;
+}
+
+export {
+  renderizarPersonajes,
+  mostrarDetallesPersonajes,
+  filtrarPorNombre,
+  filtrarPorSelect,
+};

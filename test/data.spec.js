@@ -1,23 +1,21 @@
-import { example, anotherExample } from '../src/data.js';
+import { filtrarPorNombre } from "../src/data";
+import data from "../src/data/breakingbad/breakingbad";
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe("filtrarPorNombre", () => {
+  const personajes = data.breaking_bad;
+  it("debe retornar un array con un elemento para el nombre: lalo", () => {
+    const resultados = filtrarPorNombre("lalo", personajes);
+    expect(resultados.length).toBe(1);
+  });
+  it("debe retornar un array con dos elemento para el nombre: walter", () => {
+    const resultados = filtrarPorNombre("walter", personajes);
+    expect(resultados.length).toBe(2);
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it("debe retornar un array vacio para el nombre: pancho", () => {
+    const resultados = filtrarPorNombre("pancho", personajes);
+    expect(resultados.length).toBe(0);
   });
+
 });
 
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
