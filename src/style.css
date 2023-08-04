@@ -14,13 +14,12 @@ html {
   justify-content: center;
   position: relative;
   overflow-x: hidden;
-  background: #017683;
+  background: #009688;
 }
 header {
   text-align: center;
   width: 100%;
-  height: 400px;
-  min-height: 200px;
+  height: auto;
 }
 .imagen-logo {
   width: 196px;
@@ -33,6 +32,7 @@ h1 {
 }
 .descripcion {
   width: 70%;
+  height: auto;
   margin: 0 auto;
   padding-top: 20px;
   letter-spacing: 1px;
@@ -43,39 +43,37 @@ h1 {
 .container-select {
   width: 100%;
   height: 30vh;
- text-align: center;
+  text-align: center;
   padding-top: 30px;
- 
 }
 
 input[type="text"] {
- padding: 12px 0px 12px 42px;
+  padding: 12px 0px 12px 42px;
   background-color: #c0e0cf;
   cursor: pointer;
   margin-bottom: 20px;
   outline: none;
- border-radius: 5px;
- border: none;
-
- 
+  border-radius: 5px;
+  border: none;
 }
-.search-logo input:focus{
+.search-logo input:focus {
   border: 3px solid green;
 }
 .search-logo {
   position: relative;
-} 
-.search-logo i{ 
-   position: absolute;
+}
+.search-logo i {
+  position: absolute;
   margin-left: 15px;
-  top: 11px;
+  top: 12px;
   font-size: 18px;
- 
-} 
-.search-logo input::placeholder, input, i{
-  color: #5d6d7e;
+}
+.search-logo input::placeholder,
+input,
+i {
+  color: #212121;
   font-weight: bold;
- 
+  font-size: 16px;
 }
 
 select {
@@ -85,7 +83,7 @@ select {
   margin: 10px;
   border-radius: 5px;
   background-color: #c0e0cf;
-  color: #5d6d7e;
+  color: #212121;
 }
 
 option {
@@ -93,11 +91,33 @@ option {
   background-color: white;
   color: black;
 }
+.boton-resetear {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #303f9f;
+  border: none;
+  color: white;
+  transition: all 200ms linear;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.fa-rotate-left {
+  color: white;
+  margin-right: 50px;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
 h2 {
   font-size: 2rem;
   text-align: center;
   color: #ffeb3b;
-  margin-bottom: 50px;
 }
 /* estilos para las card  */
 
@@ -125,7 +145,7 @@ h2 {
 }
 .card-name {
   font-weight: bold;
-  color: #cc0033;
+  color: red;
 }
 .tarjeta:hover {
   cursor: pointer;
@@ -144,7 +164,7 @@ h2 {
 /* Estilos del footer */
 footer {
   width: 100%;
-  height: 95px;
+  height: 40%;
   margin-top: 40px;
   display: flex;
   justify-content: center;
@@ -265,58 +285,41 @@ span {
   .descripcion {
     font-size: 0.8rem;
   }
-  input[type="text"] {
-    width: 50%;
-    font-size: 13px;
-    padding: 12px 0 12px 40px;
+  .container-select {
+    width: 100%;
+    height: 50vh;
   }
 
   h2 {
     font-size: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
   }
-  .paragrapf{
+  .paragrapf {
     font-size: 16px;
   }
 
-   /*response del modal */
-  .modal{
+  /*response del modal */
+  .modal {
     width: 90%;
     height: 500px;
-    
-    
-      }
-      .card-img1 {
-      width: 150px;
-      max-width: 100%;
-        height:auto;
-        object-fit: cover;
-       
-      }
-      .modal-description {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      font-size: 14px;
-      
-      }
-     
-      li {
-        line-height: 15px;
-       
-      }
-     .modal h3{
-      font-size: 18px;
-     }
-  
-  
+  }
+  .card-img1 {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .modal-description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  li {
+    line-height: 15px;
+  }
+  .modal h3 {
+    font-size: 18px;
+  }
 }
-
-
-@media screen and (max-width: 1024px){
-  .container-select {
-    padding-top: 70px;
-   
-  }  
-}
-

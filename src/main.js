@@ -21,6 +21,9 @@ const categoria = document.getElementById("categoria");
 const temporadas = document.getElementById("temporadas");
 const ordenamiento = document.getElementById("ordenamiento");
 
+// Boton reseteo filtros
+const botonReseteo = document.querySelector(".boton-resetear");
+
 renderizarPersonajes(personajes, contenedorPersonajes, modalPersonaje);
 //Listener
 buscador.addEventListener("keyup", (e) => {
@@ -64,4 +67,14 @@ ordenamiento.addEventListener("change", () => {
   );
 
   renderizarPersonajes(resultados, contenedorPersonajes, modalPersonaje);
+});
+
+//Listener del boton-reseteo
+botonReseteo.addEventListener("click", () => {
+  buscador.value = "";
+  categoria.value = "";
+  temporadas.value = "";
+  ordenamiento.value = "";
+
+  renderizarPersonajes(personajes, contenedorPersonajes, modalPersonaje);
 });

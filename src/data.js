@@ -176,9 +176,9 @@ function filtrarPorNombre(nombre, personajes) {
 function filtrarPorSelect(categoria, temporadas, ordenamiento, personajes) {
   let resultados = personajes;
   // Obtenemos el valor de la opcion seleccionada en categoria, temporadas y ordenamiento
-  const valorSerie = categoria.options[categoria.selectedIndex].value;
-  const valorTemporadas = temporadas.options[temporadas.selectedIndex].value;
-  const valorOrdenar = ordenamiento.options[ordenamiento.selectedIndex].value;
+  const valorSerie = categoria.value;
+  const valorTemporadas = temporadas.value;
+  const valorOrdenar = ordenamiento.value;
   // Validamos si el filtro de serie esta activado,entonces filtramos por serie
   if (valorSerie !== "") {
     resultados = personajes.filter((personaje) =>
