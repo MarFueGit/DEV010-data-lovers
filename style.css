@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Monserrat", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  background: #009688;
+}
+header {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+.imagen-logo {
+  width: 196px;
+  height: 196px;
+  padding-top: 20px;
+}
+h1 {
+  padding-top: 20px;
+  color: #ffeb3b;
+}
+.descripcion {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 20px;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 20px;
+}
+/* estilos del input y select */
+.container-select {
+  width: 100%;
+  height: 30vh;
+  text-align: center;
+  padding-top: 30px;
+}
+
+input[type="text"] {
+  padding: 12px 0px 12px 42px;
+  background-color: #c0e0cf;
+  cursor: pointer;
+  margin-bottom: 20px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+.search-logo input:focus {
+  border: 3px solid green;
+}
+.search-logo {
+  position: relative;
+}
+.search-logo i {
+  position: absolute;
+  margin-left: 15px;
+  top: 12px;
+  font-size: 18px;
+}
+.search-logo input::placeholder,
+input,
+i {
+  color: #212121;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+select {
+  width: 280px;
+  height: 30px;
+  font-size: 17px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #c0e0cf;
+  color: #212121;
+}
+
+option {
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}
+.boton-resetear {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #303f9f;
+  border: none;
+  color: white;
+  transition: all 200ms linear;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.fa-rotate-left {
+  color: white;
+  margin-right: 50px;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #ffeb3b;
+}
+/* estilos para las card  */
+
+.tarjeta {
+  flex: 0 0 200px; /* El ancho máximo que puede tener cada tarjeta */
+  background-color: #c0e0cf;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+}
+.contenedor-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  color: #424949;
+  margin-bottom: 20px;
+}
+.card-img {
+  max-width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.card-name {
+  font-weight: bold;
+  color: red;
+}
+.tarjeta:hover {
+  cursor: pointer;
+}
+
+.card-nickname,
+.card-category {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tarjeta:hover p {
+  visibility: visible;
+  opacity: 1;
+}
+/* Estilos del footer */
+footer {
+  width: 100%;
+  height: 40%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paragrapf {
+  font-size: 20px;
+  color: white;
+  letter-spacing: 1px;
+}
+.paragrapf::after {
+  content: "🧪";
+}
+.paragrapf::before {
+  content: "🧪";
+}
+
+/* Estilos del modal*/
+
+.modal-container {
+  display: flex;
+  height: 650px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.modal-personaje {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 60%;
+  height: auto;
+  background-color: #c0e0cf;
+  /* overflow: hidden; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  transition: transform 1s;
+  transform: translateY(0%);
+  border-radius: 10px;
+}
+.modal-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.card-img1 {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 10px;
+}
+ul {
+  list-style: none;
+  width: 80%;
+  height: auto;
+}
+li {
+  line-height: 35px;
+}
+span {
+  color: red;
+  font-weight: 800;
+}
+
+.modal h3 {
+  font-size: 2rem;
+}
+.modal-close {
+  transform: translateY(-200%);
+}
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  color: #fff;
+  line-height: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Modo responsive*/
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: auto;
+  }
+  .imagen-logo {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  .descripcion {
+    font-size: 0.8rem;
+  }
+  .container-select {
+    width: 100%;
+    height: 50vh;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .paragrapf {
+    font-size: 16px;
+  }
+
+  /*response del modal */
+  .modal {
+    width: 90%;
+    height: 500px;
+  }
+  .card-img1 {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .modal-description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  li {
+    line-height: 15px;
+  }
+  .modal h3 {
+    font-size: 18px;
+  }
+}
