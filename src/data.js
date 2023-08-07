@@ -7,8 +7,8 @@ function filtrarPorNombre(nombre, personajes) {
   // Use el metodo includes para comparar el valor del input con el nickname y name.
   return personajes.filter(
     (personaje) =>
-      personaje.nickname.toLowerCase().includes(nombre) ||
-      personaje.name.toLowerCase().includes(nombre)
+      personaje.nickname.toLowerCase().includes(nombre.toLowerCase()) ||
+      personaje.name.toLowerCase().includes(nombre.toLowerCase())
   );
 }
 // Funcion para filtrar todos los selects
