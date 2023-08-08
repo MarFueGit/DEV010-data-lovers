@@ -172,6 +172,7 @@ function renderizarPersonajes(
 
 // Guardamos el array de personajes en una variable
 const personajes = data.breaking_bad;
+
 //Referencias DOM
 const contenedorPersonajes = document.querySelector(".contenedor-card");
 const buscador = document.querySelector(
