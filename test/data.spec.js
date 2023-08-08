@@ -1,4 +1,8 @@
-import { filtrarPorNombre, filtrarPorSelect } from "../src/data";
+import {
+  filtrarPorNombre,
+  filtrarPorSelect,
+  obtenerPersonajes,
+} from "../src/data";
 import data from "../src/data/breakingbad/breakingbad";
 
 describe("filtrarPorNombre", () => {
@@ -65,15 +69,29 @@ describe("filtrarPorSelect", () => {
   });
 
   it("debe retornar un array de personajes para valorSerie= Breaking Bad, valorTemporadas= 1 y valorOrdenar= ascendente", () => {
-    const resultados = filtrarPorSelect("Breaking Bad", "1", "ascendente", personajes);
+    const resultados = filtrarPorSelect(
+      "Breaking Bad",
+      "1",
+      "ascendente",
+      personajes
+    );
     expect(resultados.length).toBeGreaterThan(0);
   });
 
   it("debe retornar un array de personajes para valorSerie= Bettel Call Saul, valorTemporadas= 5 y valorOrdenar= descendente", () => {
-    const resultados = filtrarPorSelect("Breaking Bad", "5", "descendente", personajes);
+    const resultados = filtrarPorSelect(
+      "Breaking Bad",
+      "5",
+      "descendente",
+      personajes
+    );
     expect(resultados.length).toBeGreaterThan(0);
   });
+});
 
-
-
+describe("obtenerPersonajes", () => {
+  it("debe retornar un array de varios personajes", async () => {
+    const personajes = await obtenerPersonajes();
+    expect(personajes.length).toBeGreaterThan(0);
+  });
 });

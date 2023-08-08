@@ -1,6 +1,3 @@
-
-
-
 // Funcion para filtrar el input Nombre
 function filtrarPorNombre(nombre, personajes) {
   // Filtramos convirtirndo el nickname y el name en minuscula con tolowercase()
@@ -46,7 +43,14 @@ function filtrarPorSelect(
   return resultados;
 }
 
-export {
-  filtrarPorNombre,
-  filtrarPorSelect,
+// Obtenemos personajes usando fetch de la data breakinbad.json
+// Usamos Asyn por que el fetch nos devuelve una promesa
+const obtenerPersonajes = async () => {
+  return fetch("./data/breakingbad/breakingbad.json")
+    .then((response) => response.json())
+    .then((data) => {
+      return data.breaking_bad;
+    })
+    .catch((error) => console.error(error));
 };
+export { filtrarPorNombre, filtrarPorSelect, obtenerPersonajes };
