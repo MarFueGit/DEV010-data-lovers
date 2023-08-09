@@ -2,6 +2,7 @@
 // Importamos la data del archivo de Breakingbad.
 
 import {
+  calcularPorcentajeDeAparicion,
   filtrarPorNombre,
   filtrarPorSelect,
   obtenerPersonajes,
@@ -90,11 +91,9 @@ async function mostrarLista() {
     // Agregamos porcentaje de aparicion
     const porcentaje = document.createElement("li");
     // Calculamos el porcentaje de aparicion de breaking bad y bettel call saul
-    porcentaje.innerHTML = `<span>Porcentaje de aparición: </span> ${
-      (personaje.appearance.length / 5) * 100 > 0
-        ? (personaje.appearance.length / 5) * 100
-        : (personaje.better_call_saul_appearance.length / 5) * 100
-    }%`;
+    porcentaje.innerHTML = `<span>Porcentaje de aparición: </span> ${calcularPorcentajeDeAparicion(
+      personaje
+    )}%`;
     lista.appendChild(porcentaje);
 
     modalDescription.appendChild(imagen);

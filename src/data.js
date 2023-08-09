@@ -45,12 +45,23 @@ function filtrarPorSelect(
 
 // Obtenemos personajes usando fetch de la data breakinbad.json
 // Usamos Asyn por que el fetch nos devuelve una promesa
-const obtenerPersonajes = async () => {
+async function obtenerPersonajes() {
   return fetch("./data/breakingbad/breakingbad.json")
     .then((response) => response.json())
     .then((data) => {
       return data.breaking_bad;
     })
     .catch((error) => console.error(error));
+}
+
+function calcularPorcentajeDeAparicion(personaje) {
+  return (personaje.appearance.length / 5) * 100 > 0
+    ? (personaje.appearance.length / 5) * 100
+    : (personaje.better_call_saul_appearance.length / 5) * 100;
+}
+export {
+  filtrarPorNombre,
+  filtrarPorSelect,
+  obtenerPersonajes,
+  calcularPorcentajeDeAparicion,
 };
-export { filtrarPorNombre, filtrarPorSelect, obtenerPersonajes };
