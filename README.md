@@ -7,21 +7,21 @@
 * 3.- Tecnologias usadas en el proyecto.
 * 4.- Prototipo de baja fidelidad.
 * 5.- Sprints
-* 6.- Obtaculos.
+* 6.- Obstaculos.
 * 7.- Puntos de mejora.
 * 8.- Agradecimientos.
 
 ### Investigación previa
-¿porque elegi breaking bad?
+- ¿porque elegi breaking bad?
 La verdad  decidí hacer el proyecto de breaking bad debido a que me enganchó desde el primer capítulo. ya que la considero una de las mejores series de netflix, por que es muy elogiada tanto por la audiencia como por los críticos.
 
 
-¿Quiénes son los principales usuarios de producto?
+- ¿Quiénes son los principales usuarios de producto?
 Los fanaticos y las personas que no conocen ni saben nada de la serie.
 
-¿Cuáles son los objetivos de estos usuarios en relación con el producto? Conocer acerca de los personajes y querer saber mas de la serie.
+- ¿Cuáles son los objetivos de estos usuarios en relación con el producto? Conocer acerca de los personajes y querer saber mas de la serie.
 
-¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+- ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 Quieren saber su informacion mas detallada:
 * 1.- Nombre
 * 2.- Foto
@@ -99,10 +99,11 @@ Debe tener un botón que resetee los filtros.
 HTML5, CSS3 y JAVASCRIPT
 
 #### Prototipo de baja fidelidad
-
-
-
-
+<div>
+<p style = 'text-align:center;'>
+<img src="./src//assets//img/1.png" alt="JuveYell" width="500px">
+</p>
+</div>
 
 #### Sprints
 
@@ -129,9 +130,24 @@ En este sprint presente la tercera parte de la interfaz.
 * 3.- Termine los test
 * 4.- Hize responsive la interfaz
 
+#### Obstaculos
+* 1.- Me costó implementar las historias de usuarios.
+* 2.- Alinear las cards.
+* 3.- Hacer el deploy a git pages.
+* 4 .-Se me complico como comenzar y hacer los test unitarios.
+
+#### Puntos de mejoras
+* 1.- No presionarme tanto y darme un respiro.
+* 2.- Aprender más sobre las historias de usuarios.
+* 3.- Investigar mas sobre mock manual.
+
+#### Agradecimientos
+Muchas gracias a mis compañeras y a mis coaches por el apoyo, me costo llegar hasta donde estoy ahorita y seguire echandole ganas.
 
 
-*
+
+
+
 
 
 
